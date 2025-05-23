@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate data points for the standard normal distribution
+mean = 0
+std_dev = 1
+x = np.linspace(mean - 4*std_dev, mean + 4*std_dev, 1000)
+y = (1 / (std_dev * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mean) / std_dev)**2)
+
+# Create the plot
+plt.plot(x, y, label='Standard Normal Distribution', color='blue')
+
+# Add labels and title
+plt.title('Standard Normal Distribution Curve')
+plt.xlabel('z')
+plt.ylabel('Probability Density')
+
+# Add a legend
+plt.legend()
+
+# Show the plot
+plt.grid(True)
+plt.show()
